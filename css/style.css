@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+/* ========================= root ============================ */
+:root {
+	--dark-theme : rgb(8, 8, 8);
+	--dark-theme2 : #01040f;
+	--grey-light-theme : #f2f2f2;
+	--white-theme : white;
+	--green-theme : #00ff40;
+	--yellow-theme : #f5f500;
+}
+/* ========================= end root ======================== */
+
+html, body {
+	font-family: 'Roboto', sans-serif;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	color:  var(--dark-theme);
+	font-style: none;
+	text-decoration: none;
+}
+
+.button {
+	padding: 10px 15px;
+	border-radius: 100px;
+	width: 10%;
+	height: 25px;
+	background: rgba(0, 0, 0, 0);
+	border: 2px solid black;
+	transition: 0.3s;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* ========================= banner =========================== */
+.banner {
+	/*background-color: var(--dark-theme);*/
+	background: url('../img/background.jpg');
+	background-size: cover;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.banner .side-background {
+	background: var(--dark-theme2);
+	position: absolute;
+	height: 100%;
+	width: 40%;
+	top: 0;
+	right: 0%;
+	overflow: hidden;
+	/*box-shadow: 2px 0px 10px rgb(30, 30, 30);*/
+}
+
+.banner .shadow {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0);
+	position: absolute;
+	z-index: 10;
+}
+
+.banner .content {
+	width: 80%;
+	height: 70%;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	font-size: 70px;
+	font-family: 'Montserrat', sans-serif;
+	text-align: center;
+	color: var(--dark-theme);
+	line-height: 140%;
+	z-index: 11;
+}
+
+.button-container {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	width: 100%;
+	height: 38%;
+	margin-top: 2%;
+}
+
+.banner .button {
+	padding: 9% 40%;
+	font-size: large;
+	font-weight: 700;
+}
+
+.banner .button:first-child {
+	border : 3px solid var(--green-theme);
+}
+
+.banner .button:first-child:hover {
+	border : 3px solid var(--green-theme);
+	background: var(--green-theme);
+}
+
+.banner .button:nth-child(2) {
+	border : 3px solid var(--dark-theme);
+	background: var(--dark-theme);
+	color: white;
+}
+
+.banner .button:nth-child(2):hover {
+	background: rgba(0, 0, 0, 0);
+	color: black;
+}
+
+.name{
+	position: absolute;
+	top: 3%;
+	left: 5%;
+	width: 10%;
+	height: 3%;
+	font-family: arial;
+	font-size: xx-large;
+	font-weight: 700;
+	color: var(--dark-theme2);
+}
+
+.banner .menu {
+	position: absolute;
+	display: block;
+	height: 50%;
+	width: 10%;
+	top: 3%;
+	right: 4%;
+	display: block;
+	text-align: right;
+	font-size: 40px;
+}
+
+.banner .medsos {
+	position: absolute;
+	display: block;
+	height: 10%;
+	width: 25%;
+	bottom: 1%;
+	left: 5%;
+	justify-content: space-between;
+	display: flex;
+	font-size: 40px;
+}
+
+.banner .medsos .buddhi {
+	overflow: hidden;
+}
+
+.banner .medsos .buddhi img {
+	width: 45px;
+	height: 45px;
+}
+
+.banner .medsos i:first-child {
+	font-size: 40px;
+}
+
+/* ======================= end banner ========================= */
+/* ========================= about ============================ */
+.about-container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-sizing: border-box;
+	background: var(--grey-light-theme);
+	padding: 5% 2%;
+}
+
+.about {
+	border-radius: 5px;
+	width: 95%;
+	padding: 4%;
+	display: block;
+	position: relative;
+	background:	 var(--white-theme);
+	box-sizing: border-box;
+}
+
+.about .title {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.about .title .lineH {
+	width: 65%;
+	display: flex;
+	justify-content: center;
+	font-size: xx-large;
+	font-family: 'Montserrat', sans-serif;
+	border-bottom: 4px solid #f5f500;
+}
+
+.about .image {
+	width: 100%;
+	height: 250px;
+	background: grey;
+	margin: 7% 0;
+}
+
+.about .content {
+	text-align: justify;
+	font-size: larger;
+	font-weight: 600;
+}
+/* ======================= end about ========================== */
