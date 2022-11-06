@@ -14,6 +14,99 @@
   transition:all .2s linear;
 }
 
+.line-v {
+  width: 1px;
+  height: 40px;
+  border-left: 2px solid var(--yellow);
+}
+
+/* cover dark */
+.cover-dark {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 99;
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  transition: all 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cover-dark {
+  opacity: 0;
+}
+
+.img .cover .info .link {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.img .cover .info .link i {
+  font-size: 40px;
+  margin-right: 2%;
+  color: rgb(209, 209, 209);
+  transition: all 0.3s;
+}
+
+.img .cover .info .link a {
+  margin-right: 2%;
+}
+
+.img .cover .info .link a:hover i {
+  color: white;
+}  
+
+.img .cover {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img .cover .info {
+  width: 80%;
+  height: 100%;
+  display: block;
+  padding: 10% 0;
+}
+
+.img .cover .info .date {
+  font-size: small;
+  font-style: italic;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+.img .cover .info .title {
+  font-weight: 800;
+  font-size: xx-large;
+  color: white;   
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.img .cover .info .content-offer {
+  font-weight: 700;
+  font-size: large;
+  color: white;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.img:hover .cover-dark {
+  opacity: 1;
+}
+/*cover dark*/
+
 ::-webkit-scrollbar {
   width: 20px;
 }
@@ -199,6 +292,39 @@ header .navbar a:hover{
   padding:1rem 0;
 }
 
+.home .content .container {
+  display: flex;
+  width: 45%;
+  height: 40px;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1%;
+}
+
+.home .content .container .btn {
+  height: 40px;
+  margin: 0;
+  padding: 1% 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home .content .container a {
+  color: #666;
+  transition: 0.3s;
+}
+
+.home .content .container a:hover {
+  color: #111;
+}
+
+.home .content .container i {
+  font-size: 40px;
+}
+
+/* end home */
+/* group */
 .group .box-container{
   display: flex;
   flex-wrap: wrap;
@@ -210,7 +336,7 @@ header .navbar a:hover{
   position: relative;
   overflow: hidden;
   box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
-  border:.1rem solid rgba(0,0,0,.3);
+  /*border:.1rem solid rgba(0,0,0,.3);*/
   cursor: pointer;
   border-radius: .5rem;
 }
@@ -248,8 +374,6 @@ header .navbar a:hover{
   font-size: medium;
 }
 
-
-
 .group .box-container .box:hover .image{
   top:0;
 }
@@ -258,6 +382,221 @@ header .navbar a:hover{
   transform: translateY(100%);
 }
 
+/* about */
+.about {
+  display: block;
+  width: 100%;
+  background: white;
+  overflow: hidden;
+  padding : 7% 10%;
+  position: relative;
+}
+
+.about .title {
+  width: 100%;
+  text-align: center;
+  font-size: 3.5rem;
+  padding: 1rem;
+  color: #666;  
+  font-weight: 700;
+}
+
+.about .container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.about .container .img {
+  /*flex: 1 1 30rem;*/
+  width: 100%;
+  overflow: hidden;
+  border-radius: 3px;
+  position: relative;
+}
+.about .container .img img {
+  width: 100%;
+  height: 100%;
+}
+
+.about .container .content {
+  width: 100%;
+}
+
+.about .container .content .text-heading {
+  font-size: 3rem;
+  font-weight: 700;
+  padding: 0.5rem 0;
+  color: #111;
+}
+
+.about .container .content .secondary-heading {
+  font-size: 2.2rem;
+  font-weight: 650;
+  color: #222;
+}
+
+.about .container .content .text-content {
+  font-size: 1.6rem;
+  font-weight: 500;
+
+}
+/*end about*/
+/* gallery */
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.gallery .container {
+  width: 90%;
+  height: 90%;
+  display: block;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.gallery .container .title {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  color: #666;
+  font-size: 3.5rem;
+  font-weight: 700;
+  padding: 2rem;
+}
+
+.gallery .container .content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: relative;
+}
+
+.gallery .container .content .img {
+  flex:1 1 30rem;
+  overflow: hidden;
+  position: relative;
+  margin: 1% 1%;
+  border-radius: 2px;
+}
+
+.gallery .container .content img {
+  width: 100%;
+  height: 100%;
+}
+
+/* end gallery */
+/* buddhi school */
+.buddhi-school {
+  background: white;
+  width: 100%;
+  height: 70vh;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buddhi-school .container {
+  width: 90%;
+  height: 90%;
+  display: flex;
+  position: relative;
+}
+
+.buddhi-school .container .content {
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.buddhi-school .container .content .text {
+  height: 70%;
+}
+
+.buddhi-school .container .content .title{
+  color: #111;
+  font-size: xx-large;
+  font-weight: 700;
+  padding: 1% 0; 
+}
+
+.buddhi-school .container .content .secondary-heading {
+  color: #222;
+  font-size: large;
+  font-weight: 700; 
+}
+
+.buddhi-school .container .content .text-content {
+  font-weight: 400;
+  font-size: medium;
+  width: 100%;
+}
+
+.buddhi-school .container .content .link-container {
+  width: 100%;
+  height: 10%;
+  display: flex;
+}
+
+.buddhi-school .container .content .link-container .line-v {
+  border-left: 2px solid #111;
+}
+
+.buddhi-school .container .content .link-container .media {
+  width: 70%;
+  height: 45px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 2%;
+}
+
+.buddhi-school .container .content .link-container .media a {
+  font-size: 30px;
+  color: #666;
+  transition: 0.3s;
+}
+
+.buddhi-school .container .content .link-container .media a:hover {
+  color: #111;
+}
+
+.buddhi-school .container .content .addres {
+  position: absolute;
+  bottom: 4%;
+  left: 2px;
+}
+
+.buddhi-school .container .card-container {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.buddhi-school .container .card-container .img {
+  width: 90%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.buddhi-school .img .cover .info .link i{
+  font-size: 30px;
+}
+
+.buddhi-school .img .cover .info {
+  padding: 25% 0;
+}
+
+/* buddhi school */
+/* contact us */
 .order .row{
   padding:2rem;
   box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
@@ -371,23 +710,32 @@ header .navbar a:hover{
   top:-120%;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* media queries  */
 
-@media(max-width:991px){
+@media(min-width: 791px) {
+  .about {
+    margin-top: 5%;
+  }
+  .about .title {
+    margin-bottom: 3%;
+  }
 
+  .about .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    padding: 2% 3%;
+  }
+  .about .container .img {
+    width: 45%;
+  }  
+
+  .about .container .content {
+    width: 40%;
+  }
+}
+
+@media(max-width:991px){
   html{
     font-size: 55%;
   }
@@ -403,7 +751,6 @@ header .navbar a:hover{
 }
 
 @media(max-width:768px){
-
   #menu-bar{
     display: initial;
   }
@@ -429,10 +776,69 @@ header .navbar a:hover{
     background:#fff;
   }
 
+  .buddhi-school {
+    width: 100%;
+    height: 100%;
+
+  }
+    
+  .buddhi-school .container {
+    width: 90%;
+  }
+
+  .buddhi-school .container .content {
+    width: 100%;
+    height: 55%;
+    order: 2;
+    margin-bottom: 2rem;
+  }
+
+  .buddhi-school .container .content .title{ 
+    width: 100%;
+
+  }
+
+  .buddhi-school .container .content .secondary-heading {
+    width: 100%;
+  }
+
+  .buddhi-school .container .content .text-content {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .buddhi-school .container .card-container {
+    width: 100%;
+    height: 30%;
+  }
+
+  .buddhi-school .container .card-container .img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .buddhi-school .img .cover .info .link i{
+    font-size: 30px;
+  }
+
+  .buddhi-school .img .cover .info {
+    padding: 10% 0;
+  }
+
+  .buddhi-school .container {
+    display: block;
+    width: 100%;
+  }
+
+  .buddhi-school .container .card-container .img img {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 @media(max-width:450px){
-
   html{
     font-size: 50%;
   }
@@ -440,4 +846,28 @@ header .navbar a:hover{
   .order .row form .inputBox input{
     width:100%;
   }
+
+  .img .cover .info {
+    width: 80%;
+    height: 80%;
+  }
+
+  .img .cover .info .title {
+    font-size: large;
+  }
+
+  .img .cover .info .content-offer {
+    text-align: center;
+  }
+
+  .buddhi-school .container .content {
+    width: 100%;
+    height: 56%;
+    order: 2;
+  }
+
+  .buddhi-school .container .content .media {
+    margin-top: 1%;
+  }
+
 }
