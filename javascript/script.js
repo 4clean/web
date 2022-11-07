@@ -45,3 +45,22 @@ function fadeOut(){
 }
 
 window.onload = fadeOut();
+
+// contact
+let contactForm = document.getElementById("form-contact");
+
+contactForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const url = e.target.action;
+  const formData = new FormData(contactForm);
+
+  fetch(url, {
+    method: "POST",
+    body: formData,
+    mode: "no-cors",
+  }) .then(() => {
+    alert('email berhasil dikirim');
+  })  .catch((e) => {
+    alert('sedang terjadi kesalahan, coba lagi nanti')
+  })
+})
