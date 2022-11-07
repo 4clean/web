@@ -16,7 +16,10 @@
 
 </head>
 <body>
-    
+<!-- loading -->
+<!-- <div class="loading">
+    <img src="images/loader.gif">
+</div>     -->
 <!-- header section starts  -->
 
 <header id="navigation-bar">
@@ -311,7 +314,7 @@
 </section>
 <!-- end gallery -->
 <!-- school -->
-<section class="buddhi-school">
+<section class="buddhi-school" id="buddhi">
     <div class="container">
         <div class="content">
             <div class="text">
@@ -394,15 +397,14 @@
             <img src="images/background.jpg" alt="">
         </div>
 
-        <form action="">
-
+        <form id="form-contact" action="https://formspree.io/f/mwkzakbo" method="POST">
             <div class="inputBox">
-                <input type="text" placeholder="name">
-                <input type="email" placeholder="email">
+                <input type="text" placeholder="name" name="name">
+                <input type="email" placeholder="email" name="email">
             </div>
-            <textarea placeholder="message" name="" id="" cols="30" rows="10"></textarea>
+            <textarea placeholder="message" name="message" id="" cols="30" rows="10"></textarea>
 
-            <input type="submit" value="kirim" class="btn" onclick="alert('fitur ini dalam tahap pengembangan')">
+            <input type="submit" value="kirim" class="btn">
 
         </form>
 
@@ -414,9 +416,19 @@
 
 <!-- footer section  -->
 
-<section class="footer">
-
-</section>
+<div class="footer">
+    <div class="about">
+        <div class="title">
+            Didukung oleh SMA Perguruan buddhi
+        </div>
+        <div class="addres">
+            Jl. Imam Bonjol No 41 Karawaci Ilir
+        </div>
+        <div class="author">
+            created by | <a href="https://www.instagram.com/tuppn_/" target="_blank">@tuppn_</a> Nov 2022
+        </div>
+    </div>
+</div>
 
 <!-- scroll top button  -->
 <a href="#home" class="fas fa-angle-up" id="scroll-top"></a>
