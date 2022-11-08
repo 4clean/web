@@ -48,9 +48,20 @@ window.onload = fadeOut();
 
 // contact
 let contactForm = document.getElementById("form-contact");
+let loaderContact = document.getElementById("contact-spinner");
+const alert = document.querySelectorAll(".alert");
+const closeButton = document.querySelectorAll('.close');
+
+function autoRemoveClass(element, time, className) {
+  setTimeout(() => {
+    element.classList.remove(className);
+  }, time)
+};
 
 contactForm.addEventListener("submit", (e) => {
   e.preventDefault();
+  loaderContact.style.display = "flex";
+
   const url = e.target.action;
   const formData = new FormData(contactForm);
 
@@ -59,8 +70,19 @@ contactForm.addEventListener("submit", (e) => {
     body: formData,
     mode: "no-cors",
   }) .then(() => {
-    alert('email berhasil dikirim');
+    alert[0].classList.add("alert-fade-in");
+    loaderContact.style.display = "none";
+    autoRemoveClass(alert[0], 2000, "alert-fade-in");
   })  .catch((e) => {
-    alert('sedang terjadi kesalahan, coba lagi nanti')
+    alert[1].classList.add("alert-fade-in");
+    autoRemoveClass(alert[1], 2000, "alert-fade-in");
+  })
+})
+
+closeButton.forEach((e) => {
+  e.addEventListener('click', () => {
+    alert.forEach((e) => {
+      e.classList.remove("alert-fade-in"); 
+    })
   })
 })
