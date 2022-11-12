@@ -3,7 +3,7 @@
 :root{
   --yellow: #ffd000; 
 }
-
+ 
 *{
   font-family: 'Nunito', sans-serif;
   margin:0; padding:0;
@@ -13,7 +13,7 @@
   text-transform: capitalize;
   transition:all .2s linear;
 }
-
+ 
 .line-v {
   width: 1px;
   height: 40px;
@@ -378,10 +378,6 @@ header .navbar a:hover{
   top:0;
 }
 
-.group .box-container .box:hover .content{
-  transform: translateY(100%);
-}
-
 /* about */
 .about {
   display: block;
@@ -697,7 +693,7 @@ header .navbar a:hover{
   position: fixed;
   top:-120%;
   right:2rem;
-  padding: 10px;
+  padding: 12px;
   font-size: 4rem;
   background:var(--yellow);
   color:#fff;
